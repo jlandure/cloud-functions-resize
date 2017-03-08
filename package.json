@@ -1,0 +1,14 @@
+{
+  "name": "cloud-functions-resize",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache Version 2.0",
+  "author": "jlandure",
+  "main": "./index.js",
+  "dependencies": {
+    "@google-cloud/pubsub": "0.8.0",
+    "@google-cloud/storage": "0.7.0",
+    "@google-cloud/translate": "0.7.0",
+    "@google-cloud/vision": "0.8.0"
+  }
+}
