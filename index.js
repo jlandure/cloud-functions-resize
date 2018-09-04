@@ -22,7 +22,7 @@ exports.cfResize = function processImage (event, callback) {
   }
 
   const thumbnailName = "thumbnail-" + file.name;
-  const bucketName = config.RESULT_BUCKET;
+  const bucketName = "faas-thumbnail-files";
 
   file = storage.bucket(file.bucket).file(file.name);
   return file.download({destination:`/tmp/${path.parse(file.name).base}`})

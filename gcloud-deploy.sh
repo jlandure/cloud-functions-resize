@@ -1,4 +1,4 @@
 #gcloud config set project test-fass
 
-gcloud alpha functions deploy "cfResize" --stage-bucket "cloud-functions-resize" --trigger-provider=cloud.storage --trigger-event=object.change --trigger-resource="faas-files"
-gcloud alpha functions deploy "cfNotifyFirebase" --stage-bucket "cloud-functions-resize" --trigger-provider=cloud.storage --trigger-event=object.change --trigger-resource="faas-thumbnail-files"
+gcloud functions deploy "cfResize" --trigger-resource="faas-files" --trigger-event=google.storage.object.finalize
+gcloud functions deploy "cfNotifyFirebase" --trigger-resource="faas-thumbnail-files" --trigger-event=google.storage.object.finalize
